@@ -1,0 +1,40 @@
+# ra project config — committed to source control.
+# Precedence: project overrides user. See user config for defaults and
+# the full secrets/env schema.
+
+gcloud:
+    project: alphago-repro
+plugins:
+    github:
+        auth_provider: pat
+        enabled: true
+        repo_urls:
+            - git@github.com:adamtait/katago.git
+secrets:
+    github_pat:
+        secret_name: github-pat-alphago-repro
+        env_var: GH_TOKEN
+
+# Uncomment any of the groups below to override user values for this project.
+#
+# git:
+#   user_name: Project-Specific Name
+#   user_email: project@example.com
+#
+# gcloud:
+#   workstation:
+#     machine_type: e2-standard-8
+#     disk_size_gb: 100
+#     auto_sleep_hours: 1
+#
+# plugins:
+#   <plugin-name>:
+#     enabled: false        # project-level false overrides user-level true
+#
+# secrets:
+#   my_extra_secret:
+#     secret_name: my-extra-secret
+#     env_var: MY_EXTRA
+#
+# env:
+#   MY_STATIC_VAR: foo
