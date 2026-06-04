@@ -4,6 +4,8 @@
 
 gcloud:
     project: alphago-repro
+    workstation:
+        config_name: katago-config
 plugins:
     github:
         auth_provider: pat
